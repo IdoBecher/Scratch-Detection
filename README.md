@@ -6,24 +6,6 @@ This repository presents a complete machine learning and deep learning pipeline 
 
 Given a wafer map from a specific test operation, the goal is to classify each die as either part of a scratch or not. Scratches are sequences of dies (both bad and good) suspected to be affected by physical defects on the wafer. The detection must also consider wafers with **low yield**, where scratch detection should be skipped to avoid unnecessary inking.
 
-## 📁 Project Structure
-
-```
-├── data/                     # Folder for storing input and processed CSVs
-├── notebooks/                # Jupyter notebooks for exploration and training
-├── src/
-│   ├── feature_engineering.py    # Functions for basic and neighbor-based features
-│   ├── preprocessing.py          # Low-yield filtering logic
-│   ├── model_training.py         # Classical ML model training and SMOTE
-│   └── deep_learning/
-│       ├── dataset.py            # WaferRawDataset class
-│       ├── unet_model.py         # U-Net model with ResNet18 backbone
-│       ├── train_unet.py         # U-Net training loop
-│       └── inference.py          # Prediction on test set
-├── submission_generator.py  # Code to generate submission CSV
-├── requirements.txt         # Package dependencies
-└── README.md
-```
 
 ## 🧠 Approaches Implemented
 
